@@ -11,7 +11,7 @@ const app = express()
 const port = 8080
 
 const Url = "http://localhost:5173";
-const clientUrl = "https://meet-milan.vercel.app/";
+const clientUrl = "https://meet-milan.vercel.app";
 
 // const key = fs.readFileSync('cert.key');
 // const cert = fs.readFileSync('cert.crt');
@@ -21,7 +21,7 @@ const server = createServer(app);//httpo
 const io = new Server(server,{
     cors:{
         // origin:"*"
-        origin: "*",//Dhayan se
+        origin: {clientUrl},//Dhayan se
         credentials: true,
     }
 })
@@ -33,7 +33,7 @@ const socketIdToRoomMap = new Map();
 
 app.use(cors({
     // origin:"*"
-    origin: "*",//dhayan se
+    origin: {clientUrl},//dhayan se
     credentials: true,
 }))
 
