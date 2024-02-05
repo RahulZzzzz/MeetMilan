@@ -21,7 +21,7 @@ const server = createServer(app);//httpo
 const io = new Server(server,{
     cors:{
         // origin:"*"
-        origin: {clientUrl},//Dhayan se
+        origin: "*",//Dhayan se
         credentials: true,
     }
 })
@@ -33,7 +33,7 @@ const socketIdToRoomMap = new Map();
 
 app.use(cors({
     // origin:"*"
-    origin: {clientUrl},//dhayan se
+    origin: "*",//dhayan se
     credentials: true,
 }))
 
