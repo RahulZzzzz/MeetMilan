@@ -4,7 +4,8 @@ import {io} from "socket.io-client"
 // import peer from './service/peer';
 import ReactPlayer from "react-player"
 
-const URL = "http://localhost:8080";
+const url = "http://localhost:8080";
+const URL = "https://meet-milan-server.vercel.app/";
 
 function Room({name,room,localAudioTrack,localVideoTrack}) {
     const [message,setMessage] = useState("")
