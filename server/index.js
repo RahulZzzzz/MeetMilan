@@ -10,7 +10,8 @@ const app = express()
 
 const port = 8080
 
-const clientUrl = "http://localhost:5173";
+const Url = "http://localhost:5173";
+const clientUrl = "https://meet-milan.vercel.app/";
 
 // const key = fs.readFileSync('cert.key');
 // const cert = fs.readFileSync('cert.crt');
