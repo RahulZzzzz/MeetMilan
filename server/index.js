@@ -21,7 +21,8 @@ const server = createServer(app);//httpo
 const io = new Server(server,{
     cors:{
         // origin:"*"
-        origin: {clientUrl},//Dhayan se
+        origin: "https://meet-milan.vercel.app",//Dhayan se
+        methods: ["POST","GET"],
         credentials: true,
     }
 })
@@ -33,7 +34,8 @@ const socketIdToRoomMap = new Map();
 
 app.use(cors({
     // origin:"*"
-    origin: {clientUrl},//dhayan se
+    origin: "https://meet-milan.vercel.app",//dhayan se
+    methods: ["POST","GET"],
     credentials: true,
 }))
 
