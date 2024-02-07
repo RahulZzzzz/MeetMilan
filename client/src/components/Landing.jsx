@@ -16,8 +16,6 @@ function Landing() {
     const [localAudioTrack, setLocalAudioTrack] = useState(null);
     const [localVideoTrack, setLocalVideoTrack] = useState(null);
     const videoRef = useRef(null);
-    //88
-    const [myStream,setMyStream] = useState();
   
 
     const getCam = async () => {
@@ -25,8 +23,6 @@ function Landing() {
             video: true,
             audio: true
         })
-        //88
-        setMyStream(stream);
         // MediaStream
         const audioTrack = stream.getAudioTracks()[0]
         const videoTrack = stream.getVideoTracks()[0]
@@ -40,20 +36,9 @@ function Landing() {
         // MediaStream
     }
 
-    //88
-    function stopCamera() {
-      myStream.getTracks().forEach(function(track) {
-        track.stop();
-      });
-    }
-  
     useEffect(()=>{
         if(videoRef && videoRef.current){
             getCam()
-        }
-        //88
-        return ()=>{
-          stopCamera();
         }
     },[videoRef,check])
     
