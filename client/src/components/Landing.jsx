@@ -41,6 +41,13 @@ function Landing() {
             getCam()
         }
     },[videoRef,check])
+
+    useEffect(()=>{
+      
+      return ()=>{
+        window.location.reload()
+      }
+    },[])
     
   
     return (
