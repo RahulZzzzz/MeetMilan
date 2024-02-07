@@ -14,8 +14,8 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/meet" element={<Landing/>}/>
         <Route path="/" element={<Home/>}/>
+        <Route path="/meet" element={<Landing/>}/>
       </Routes>
     </BrowserRouter>
 
